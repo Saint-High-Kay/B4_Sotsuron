@@ -16,7 +16,7 @@ std::vector<std::tuple<int, double>> findContinuousOnes(const std::vector<int>& 
             ++count;
         } else {
             if (start != -1) { // 連続が終了した場合
-                double avgIndex = sum / count;
+                double avgIndex = sum / count; //ファイバー群の平均位置
                 results.emplace_back(count, avgIndex);
                 start = -1;
                 sum = 0.0;
@@ -57,13 +57,13 @@ int clustering(int run, string filename="") {
   TString histTitleY = Form("run%02d:continuationY", run);
   TString histTitle2X = Form("run%02d:locationX", run);
   TString histTitle2Y = Form("run%02d:locationY", run);
-  TString histTitle3 = Form("run%02d:location", run);
+//TString histTitle3 = Form("run%02d:location", run);
 
   TH1D* histX = new TH1D("histX", histTitleX, chX+1, 0, chX+1);
   TH1D* histY = new TH1D("histY", histTitleY, chY+1, 0, chY+1);
   TH1D* histX2 = new TH1D("histX2", histTitle2X, (chX+1)*2, 0, chX+1);
   TH1D* histY2 = new TH1D("histY2", histTitle2Y, (chY+1)*2, 0, chY+1);
-  TH2D* hist3 = new TH2D("hist3", histTitle3, chX, chXmin, chXmin+chX, chY, chYmin, chYmin+chY);
+//TH2D* hist3 = new TH2D("hist3", histTitle3, chX, chXmin, chXmin+chX, chY, chYmin, chYmin+chY);
 
 
   int n = tree->GetEntries();
