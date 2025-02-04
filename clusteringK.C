@@ -123,6 +123,12 @@ TCanvas *c1 = new TCanvas("c1","", 1000, 500);
   c1->cd(2);
   histX2->Draw();
 
+//1回に飛来した粒子の数の平均値
+  histX -> GetMean();
+  histY -> GetMean();
+  cout << histX -> GetMean() << endl;
+  cout << histY -> GetMean() << endl;
+
   c1->cd(3);
   histY->Draw();  
   c1->cd(4);
