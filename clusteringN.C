@@ -124,13 +124,13 @@ TCanvas *c1 = new TCanvas("c1","", 1000, 500);
 
 // ヒストグラムの見た目を調整
  histX->SetLineColor(kBlue);
- histX->SetLineWidth(2); 
+ histX->SetLineWidth(3); 
  histY->SetLineColor(kRed); 
- histY->SetLineWidth(1);
+ histY->SetLineWidth(2);
  histX2->SetLineColor(kBlue);
- histX2->SetLineWidth(2); 
+ histX2->SetLineWidth(3); 
  histY2->SetLineColor(kRed); 
- histY2->SetLineWidth(1);
+ histY2->SetLineWidth(2);
 
 // Y軸の範囲を調整
  histX->GetYaxis()->SetRangeUser(0, 1.2 * std::max(histX->GetMaximum(),　histY->GetMaximum()));
