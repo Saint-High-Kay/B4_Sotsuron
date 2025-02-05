@@ -24,7 +24,6 @@ std::vector<std::tuple<int, double>> findContinuousOnes(const std::vector<int>& 
             }
         }
     }
-
     return results;
 }
 
