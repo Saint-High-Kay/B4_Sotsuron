@@ -140,11 +140,13 @@ TCanvas *c1 = new TCanvas("c1","", 1000, 500);
   c1->Divide(2,1);
 
   c1->cd(1);
-  histX->Draw("Hist1");
-  histY->Draw("Hist1 SAME");
+  histX->Draw("hist");
   c1->cd(2);
-  histX2->Draw("Hist2");
-  histY2->Draw("Hist2 SAME");
+  histX2->Draw("hist");
+  c1->cd(3);
+  histY->Draw("hist");  
+  c1->cd(4);
+  histY2->Draw("hist");
 
   if(filename!=""){
     c1->Print(filename.c_str());
